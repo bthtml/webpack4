@@ -44,4 +44,4 @@ const miniCssExtractPlugin = require("mini-css-extract-plugin");
 ### 3.html-webpack-plugin 中使用 title等选项设置模版中的值无效  
 
 原因html-loader与html-webpack-plugin冲突,html-loader直接把 <%= htmlWebpackPlugin.options.title %>解析成字符串  
-利用ejs模板的语法来动态插入各自页面的thunk和css样式  
+利用ejs模板的语法来动态插入各自页面的thunk和css样式可解决  
