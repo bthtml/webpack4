@@ -1,19 +1,21 @@
 # webpack4.26.1
 
-### 名称：  
+#### 名称：  
 webpack4搭建多页面demo  
 
-### webpack版本号：  
+#### webpack版本号：  
 4.26.1  
 
 
 ## 填坑之旅  
+
 
 ### 1.webpack4 Cannot find module '@babel/core'  
 
 原因"babel-loader": "^8.0.0" 版本问题。   
 
 使用"babel-loader": "^7.1.5"即可解决该错误。  
+
 
 
 ### 2.extract-text-webpack-plugin插件提取单独打包css文件时，报错  
@@ -43,6 +45,7 @@ const miniCssExtractPlugin = require("mini-css-extract-plugin");
         }
 
 ```
+
 
 
 ### 3.html-webpack-plugin 中使用 title等选项设置模版中的值无效  
