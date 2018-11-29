@@ -15,7 +15,8 @@ webpack版本号：4.26.1
 ###2.extract-text-webpack-plugin插件提取单独打包css文件时，报错  
 
 原因webpack4改用mini-css-extract-plugin打包  
-`
+
+```
 const miniCssExtractPlugin = require("mini-css-extract-plugin");
     module: {
         rules: [
@@ -36,7 +37,8 @@ const miniCssExtractPlugin = require("mini-css-extract-plugin");
             },
         ]
         }
-`
+
+```
 
 
 ###3.html-webpack-plugin 中使用 title等选项设置模版中的值无效  
