@@ -53,3 +53,18 @@ const miniCssExtractPlugin = require("mini-css-extract-plugin");
 原因html-loader与html-webpack-plugin冲突,html-loader直接把 <%= htmlWebpackPlugin.options.title %>解析成字符串  
 
 利用ejs模板的语法来动态插入各自页面的thunk和css样式可解决  
+
+### 4. postcss 配置不正确导致postcss-loader无效,无法自动添加css前缀
+
+postcss.config.js的配置如下  
+
+```
+module.exports = {
+    plugins: [
+        require('autoprefixer')({
+            browsers: ['cover 99.5% in CN']
+        })
+    ]
+}
+
+```
