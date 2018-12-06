@@ -12,6 +12,10 @@ const miniCssExtractPlugin = require("mini-css-extract-plugin");
 const optimizeCss = require('optimize-css-assets-webpack-plugin');
 //压缩js
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+//全局域名
+const website={
+    publicPath:'http://localhost:8080/'
+};
 //配置页面
 const htmlArray = [
     {
@@ -84,7 +88,8 @@ module.exports = {
     ],
     output: {
         filename: 'js/[name]_[hash:8].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath:website.publicPath
     },
     //本地服务
     devServer: {
@@ -114,7 +119,7 @@ module.exports = {
                         options: {
                             name: "img/[name]-[hash:8].[ext]",
                             limit: 20000, // size <= 20KB
-                            publicPath: "../",
+                            publicPath: website.publicPath,
                         }
                     },
                     {
